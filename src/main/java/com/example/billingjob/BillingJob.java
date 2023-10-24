@@ -22,16 +22,16 @@ public class BillingJob implements Job {
     @Override
     public void execute(JobExecution execution) {
         // TODO implement business logic
-        /*
-        Création d'un nv job
+
+        //Création d'un nv job
         System.out.println("Processing billing information");
         execution.setStatus(BatchStatus.COMPLETED);
         execution.setExitStatus(ExitStatus.COMPLETED);
         this.jobRepository.update(execution);
-        */
+
 
         //Handling error
-        try {
+        /*try {
             throw new Exception("Unable to process billing information");
         } catch (Exception exception) {
             execution.addFailureException(exception);
@@ -39,6 +39,6 @@ public class BillingJob implements Job {
             execution.setExitStatus(ExitStatus.FAILED.addExitDescription(exception.getMessage()));
         } finally {
             this.jobRepository.update(execution);
-        }
+        }*/
     }
 }
